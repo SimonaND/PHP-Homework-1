@@ -1,33 +1,31 @@
-<?php 
-echo 'Homework 1'; 
-echo '<br />Course PHP 2012';
-echo '<br />';
+<!DOCTYPE html>
+<html>
+<head>
+<title>Homework 1 </title>
+</head>
 
-$n = $_GET['number'];
-
-if (isset($n))
-{
+<body>
+	<h1>Homework 1 </h1>
+	<ul>
+		<li>
+			<h3>Task 1</h3>
+			<ul>
+				<li><a href="homework_1.php?number=-1">With param: -1</a></li>
+				<li><a href="homework_1.php?number=2">With param: 2</a></li>
+				<li><a href="homework_1.php?number=6">With param: 6</a></li>
+				<li><a href="homework_1.php?number=17">With param: 17</a></li>
+				<li><a href="homework_1.php?number">With param: blank</a></li>
+				<li><a href="homework_1.php?number=asa">With param: string</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3>Task 2</h3>
+			<ul>
+				<li><a href="homework_2.php">Get the third prime number; Test if 146, 284 and 871 are in the array.</a></li>
+			</ul>
+		</li>
+	</ul>
 	
-	if (is_numeric($n)) 
-	{
-		echo '<br />The parameter is a number';	
-		if (!($n>=0&&$n<=19999))
-			{
-				echo '<br /><span style="color:red">The parameter is NOT within the range [0,19999]</span>';
-			}
-		else {
-			echo '<br />The parameter is within the range [0,19999]';	
-			include_once("is_prime.php");
-			echo '<br />';
-			if (IsPrime($n)) echo 'The number ' .$n.' is prime !';
-			else echo '<span style="color:blue">The number ' .$n.' is NOT prime !</span>';
-		}
-	}
-	else {
-		echo '<br /><span style="color:red">The parameter is NOT a number</span>';
-	}
-}
-else {
-	echo 'Please enter ?number';
-}
-?>
+</body>
+
+</html> 
